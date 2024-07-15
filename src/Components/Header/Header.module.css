@@ -1,0 +1,25 @@
+.header_bgc {
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fff;
+    border: 0 0 18px 18px;
+}
+
+.header__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+}
+
+.header__icons {
+    display: flex;
+    gap: 48px;
+}
