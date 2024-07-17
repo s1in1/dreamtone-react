@@ -1,31 +1,14 @@
-import React from "react";
-import GoogleMapReact from "google-map-react";
+import React from 'react'
+import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
-export default function Map(){
-  const defaultProps = {
-    center: {
-      lat: 55.787948,
-      lng: 49.122584,
-    },
-    zoom: 11
-  };
-
+export default function MyMap() {
   return (
-    // Important! Always set the container height explicitly
-    <div style={{ height: '216px', width: '258px' }}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-      >
-        <AnyReactComponent
-          lat={55.787948}
-          lng={49.122584}
-          text="My Marker"
-        />
-      </GoogleMapReact>
-    </div>
-  );
+    <>
+      <YMaps>
+      <Map defaultState={{ center: [55.787948, 49.122584], zoom: 14 }}>
+        <Placemark geometry={[55.787948, 49.122584]} />
+      </Map>
+    </YMaps>
+    </>
+  )
 }

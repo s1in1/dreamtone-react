@@ -5,8 +5,7 @@ import { useContext } from "react";
 import { AppContext } from "../../context/Context";
 
 const Cart = () => {
-  const [current, setCurrent, Modal, setModal, cart, setCart] =
-    useContext(AppContext);
+  const [current, setCurrent, Modal, setModal, cart, setCart] = useContext(AppContext);
 
   const deleteFromCart = (id) => {
     const updCart = cart.filter((item) => item.id !== id);

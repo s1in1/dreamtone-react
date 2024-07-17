@@ -5,10 +5,17 @@
     gap: 50px;
 }
 
+.products_cont {
+    display: flex;
+    flex-direction: column;
+    gap: 84px;
+}
+
 .products__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
 }
 
 .filter {

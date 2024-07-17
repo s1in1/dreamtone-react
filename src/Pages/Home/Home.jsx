@@ -55,7 +55,7 @@ export const Home = () => {
       <div className={styles.products}>
 
         <div className="container">
-          <h1>Популярные товары</h1>
+          <h1 style={{fontWeight: 700}}>Популярные товары</h1>
           <div className={styles.products_cont}>
             <div className={styles.product_cards}>
               {cards.map((product) => {

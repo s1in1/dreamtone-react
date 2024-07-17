@@ -3,6 +3,7 @@ import { useState, useContext, useEffect } from "react";
 import { AppContext } from "../../context/Context";
 import { cards } from "../../data";
 import styles from './Catalog.module.css'
+import { ProductCard } from '../../Components/ProductCard/ProductCard'
 
 export const Catalog = () => {
   const [current, setCurrent, Modal, setModal, cart, setCart, popup, setPopup] = useContext(AppContext);
@@ -42,10 +43,10 @@ export const Catalog = () => {
       observerFunc();
     }
 
-    let filteredProductsArray = products;
+    let filteredProductsArray = cards;
     if (search.length > 0) {
       filteredProductsArray = filteredProductsArray.filter((product) =>
-        product.title.toLowerCase().includes(search.toLowerCase())
+        product.name.toLowerCase().includes(search.toLowerCase())
       );
     }
     if (sort !== "") {
@@ -59,7 +60,7 @@ export const Catalog = () => {
       });
     }
     if (search.length === 0 && sort === "") {
-      filteredProductsArray = products;
+      filteredProductsArray = cards;
     }
     setFilteredProducts(filteredProductsArray);
   }, [products, search, sort]);
@@ -67,27 +68,36 @@ export const Catalog = () => {
   return (
     <>
       <div className={styles.products}>
-      
-        <div className={styles.filter}>
-          <input
-            type="text"
-            placeholder="Поиск товаров по названию"
-            onChange={(event) => setSearch(event.target.value)}
-          />
-          <select onChange={(event) => setSort(event.target.value)}>
-            <option value={""}>Сортировка по цене</option>
-            <option value={"asc"}>По возрастанию</option>
-            <option value={"desc"}>По убыванию</option>
-          </select>
+
+        <div className="container">
+
+          <div className={styles.products_cont}>
+
+          <div className={styles.filter}>
+            <input
+              type="text"
+              placeholder="Поиск товаров по названию"
+              onChange={(event) => setSearch(event.target.value)}
+            />
+            <select onChange={(event) => setSort(event.target.value)}>
+              <option value={""}>Сортировка по цене</option>
+              <option value={"asc"}>По возрастанию</option>
+              <option value={"desc"}>По убыванию</option>
+            </select>
+          </div>
+          <div className={styles.products__list}>
+            {filteredProducts.map((product) => {
+              return <ProductCard key={product.id} product={product} />;
+            })}
+          </div>
+
+          </div>
+
         </div>
-        <div className={styles.products__list}>
-          {filteredProducts.map((product) => {
-            return <Product key={product.id} product={product} />;
-          })}
-        </div>
+
       </div>
 
-      <div className="empty-products"></div>
+      <div className="empty-products" ></div>
     </>
   );
 };
