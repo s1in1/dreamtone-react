@@ -1,6 +1,12 @@
 import slide1 from '../public/images/banner/banner1.png'
 import slide2 from '../public/images/banner/banner2.png'
 import slide3 from '../public/images/banner/banner3.png'
+import product1 from '../public/images/products/ibanez.jpg'
+import product2 from '../public/images/products/rockdale.jpg'
+import product3 from '../public/images/products/gibson.png'
+import product4 from '../public/images/products/yamaha.jpg'
+import product5 from '../public/images/products/bass.png'
+import product6 from '../public/images/products/drum.jpeg'
 
 export const slides = [
     {
@@ -55,7 +61,7 @@ export const cards = [
         id: 4,
         name: 'YAMAHA C40',
         description: 'Классическая гитара, дека ель, корпус меранти, гриф нато, накладка на гриф палисандр, колки хромированные, цвет натуральный        ',
-        code:'Артикул: A052681 ',
+        code:'A052681 ',
         category:'classic',
         photo: product4,
         price: 16000,
@@ -63,12 +69,12 @@ export const cards = [
     },
     {
         id: 5,
-        name: 'IBANEZ TCY10E-BK',
-        description: 'Электроакустическая гитара, черная модель в корпусе talman, 20 ладов. Корпус ель и махагони, гриф махагони, накладка палисандр. Звукосниматель, преамп с эквалайзером и тюнером.',
-        code:'Артикул: A052681 ',
-        category:'acoustic',
+        name: 'IBANEZ SR305EB-WK',
+        description: 'Электрическая бас-гитара, черная модель, 24 лада. Корпус красное дерево, гриф клен и палисандр, накладка палисандр. HH, 3-позиционный переключатель, громкость, баланс, EQ.',
+        code:'A063491',
+        category:'bass',
         photo: product5,
-        price: 1000,
+        price: 51000,
         rating: 5,
     },
     {

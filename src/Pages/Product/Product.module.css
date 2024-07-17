@@ -1,0 +1,33 @@
+.product {
+    margin-top: 60px;
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 20px 0;
+}
+
+.product_cont {
+    display: flex;
+    justify-content: space-between;
+    gap: 180px;;
+}
+
+.product_info {
+    display: flex;
+    flex-direction: column;
+    gap:30px ;
+}
+
+.product_name {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.product_code {
+    color: rgba(0,0, 0, 0.5);
+    font-size: 16px;
+}
+
+.product_price {
+    font-weight: 700;
+    font-size: 36px;
+}

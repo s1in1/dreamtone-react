@@ -3,6 +3,7 @@ import { Header } from "../Components/Header/Header";
 import { AppContext } from "../context/Context";
 import { useState } from "react";
 import '../index.css'
+import { Footer } from "../Components/Footer/Footer";
 
 export default function Root() {
 
@@ -17,11 +18,11 @@ export default function Root() {
       <div className="wrapper">
           <Header/>
             <main className="main">
-              
-                
+
                     <Outlet/>
-                
+
             </main>
+            <Footer/>
         </div>
 
       </AppContext.Provider>

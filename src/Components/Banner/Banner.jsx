@@ -9,7 +9,6 @@ import { Navigation, A11y } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 
 const Banner = () => {
-  console.log(slides)
 
   return (
     <>

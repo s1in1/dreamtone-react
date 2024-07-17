@@ -1,13 +1,15 @@
-import {React, useState, useEffect } from 'react'
+import {React, useState, useEffect, useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import styles from './Header.module.css'
 import {ShoppingBagIcon} from '@heroicons/react/16/solid'
 import {HeartIcon} from '@heroicons/react/16/solid'
+import { AppContext } from '../../context/Context'
 
 export const Header = () => {
 
     const location = useLocation()
 
+    const [Modal, setModal] = useContext(AppContext)
 
   return (
     <>
@@ -27,8 +29,9 @@ export const Header = () => {
             </div>
 
             <div className={styles.header__icons}>
-                <button><ShoppingBagIcon className='size-8'/></button>
-                <button><HeartIcon className='size-8'/></button>
+                <button onClick={()=> {setModal(true) 
+                    console.log(Modal)}}><ShoppingBagIcon className='size-8'/></button>
+                
             </div>
             
         </div>

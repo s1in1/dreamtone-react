@@ -61,7 +61,7 @@ const Cart = () => {
 
                         <div className={styles.cartModal_list__product_content}>
                           <h3>{item.title}</h3>
-                          <p>Price: <span>{item.price}$</span> </p>
+                          <p>Price: <span>{item.price}₽</span> </p>
                           <div className={styles.cartModal__quan}>
                             <span onClick={()=>Increment(item)}>+</span>
                             <p>Quantity: {item.quantity}</p>
