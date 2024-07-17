@@ -62,7 +62,7 @@ export const Footer = () => {
                             <div className={styles.section}>
                                 <ul>
                                     <li><h2>Мы здесь</h2></li>
-                                    <li><MyMap style={{width:20 +'%'}}/></li>
+                                    <li><div className={styles.section_map}><MyMap /></div></li>
                                 </ul>
                             </div>
                         </div>

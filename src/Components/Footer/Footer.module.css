@@ -7,8 +7,7 @@
 
 .footer_cont {
     display: flex;
-    gap: 120px;
-    flex-wrap: wrap;
+    gap: 60px;
 }
 
 .footer_start  {
@@ -17,7 +16,7 @@
 }
 
 .footer__logo {
-    width: 140%;
+    width: 100%;
 }
 
 .footer_soc {
@@ -46,7 +45,7 @@
 
 .footer_sections {
     display: flex;
-    gap: 116px;
+    gap: 60px;
     padding-top: 60px;
     flex-wrap: wrap;
 }
@@ -55,3 +54,4 @@
     font-weight: 700;
     padding-bottom: 36px;
 }
+
