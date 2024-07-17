@@ -16,9 +16,9 @@ export const Footer = () => {
                             <div className={styles.footer__logo}><img src="../../public/images/logo/logo.svg" alt="logo" /></div>
                             <div className={styles.footer__soc}>
                                 <ul className={styles.footer_soc_icons}>
-                                    <li><img src="../../public/images/icons/vk.svg" alt="vk" /></li>
-                                    <li><img src="../../public/images/icons/whatsa.svg" alt="whatsapp" /></li>
-                                    <li><img src="../../public/images/icons/zen.svg" alt="zen" /></li>
+                                    <li className={styles.footer_soc_icon}><img src="../../public/images/icons/vk.svg" alt="vk" /></li>
+                                    <li className={styles.footer_soc_icon}><img src="../../public/images/icons/whatsa.svg" alt="whatsapp" /></li>
+                                    <li className={styles.footer_soc_icon}><img src="../../public/images/icons/zen.svg" alt="zen" /></li>
                                 </ul>
                                 <p>+7 909 234 34 44</p>
                             </div>

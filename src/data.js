@@ -5,7 +5,7 @@ import product1 from '../public/images/products/ibanez.jpg'
 import product2 from '../public/images/products/rockdale.jpg'
 import product3 from '../public/images/products/gibson.png'
 import product4 from '../public/images/products/yamaha.jpg'
-import product5 from '../public/images/products/bass.png'
+import product5 from '../public/images/products/bass.jpg'
 import product6 from '../public/images/products/drum.jpeg'
 
 export const slides = [

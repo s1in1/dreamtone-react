@@ -4,9 +4,33 @@
     border-radius: 18px;
 
     margin-top: 50px;
-    
 }
 
 .show {
     transform: rotate(180deg);
+}
+
+.products {
+    justify-content: center;
+    align-items: center;
+    margin-top: 152px;
+    display: flex;
+}
+
+.products h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product_cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_cards {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
 }

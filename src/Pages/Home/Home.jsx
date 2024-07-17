@@ -1,76 +1,74 @@
-import { React, useState } from 'react'
-import Banner from '../../Components/Banner/Banner'
-import styles from './Home.module.css'
-import { ChevronDownIcon } from '@heroicons/react/16/solid'
-import { cards } from '../../data'
-import { ProductCard } from '../../Components/ProductCard/ProductCard'
+import { React, useState, useEffect, useContext } from "react";
+import Banner from "../../Components/Banner/Banner";
+import styles from "./Home.module.css";
+
+import { cards } from "../../data";
+import { ProductCard } from "../../Components/ProductCard/ProductCard";
+import { AppContext } from "../../context/Context";
 
 export const Home = () => {
 
-  const [category, setCategory] = useState(false)
+  const [current, setCurrent, Modal, setModal, cart, setCart, popup, setPopup] = useContext(AppContext)
 
-  const showCategory = (category) => {
-    for (const key in category) {
-      console.log(category[key])
-    }
+  const [loading, setLoading] = useState(true)
+
+  function observerFunc() {
+    let observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setPopup(true);
+            observer.unobserve(entry.target);
+            setLoading(false)
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1,
+      }
+    );
+  
+    const emptyProducts = document.querySelector(".empty-products");
+  
+    observer.observe(emptyProducts);
   }
+
+
+
+
+  useEffect(() => {
+    if(loading) {
+      observerFunc()
+    }
+  });
 
   return (
     <>
       <div className={styles.banner}>
-
         <div className="container">
           <Banner />
         </div>
-
       </div>
 
       <div className={styles.products}>
 
-        <div className='container'>
-
-          <div >
-
-            <div>
-
-              <h1>Категории</h1>
-              <button onClick={() => setCategory(!category)}><ChevronDownIcon className={category ? `${styles.show} size-8` : 'size-8'} /></button>
-
+        <div className="container">
+          <h1>Популярные товары</h1>
+          <div className={styles.products_cont}>
+            <div className={styles.product_cards}>
+              {cards.map((product) => {
+                return <ProductCard key={product.id} product={product} />;
+              })}
             </div>
-
-            <div>
-              {
-                category ?
-                  <div>
-                    <ul>
-                      <li>Все</li>
-                      <li>Гитары</li>
-                      <li>Барабаны</li>
-                    </ul>
-                  </div>
-                  :
-                  ''
-              }
-            </div>
-
+            <div
+              className="empty-products"
+              
+            ></div>
           </div>
-
-          <div>
-
-            {
-              cards.map((product) => {
-                <ProductCard key={product.id} product={product} />
-              })
-            }
-
-          </div>
-
         </div>
-
       </div>
-
-
-
     </>
-  )
-}
+  );
+};
