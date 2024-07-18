@@ -64,7 +64,6 @@ export const Home = () => {
             </div>
             <div
               className="empty-products"
-              
             ></div>
           </div>
         </div>

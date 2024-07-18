@@ -23,8 +23,7 @@
 
 .popup_content {
     display: flex;
-    gap: 50px;
-
+    justify-content: space-between;
 }
 
 .popup_btn {

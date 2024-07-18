@@ -1,4 +1,4 @@
-import { useRouteError } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 import styles from './Error.module.css'
 
 export default function Error() {
@@ -12,6 +12,8 @@ export default function Error() {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
+
+      <Link to='/'>Главная</Link>
     </div>
   );
 }

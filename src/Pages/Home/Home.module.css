@@ -31,7 +31,7 @@
 
 .product_cards {
     display: flex;
-    gap: 60px;
+    gap: 104px;
     flex-wrap: wrap;
     justify-content: center;
 }

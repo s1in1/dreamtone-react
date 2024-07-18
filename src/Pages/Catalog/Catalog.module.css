@@ -14,8 +14,8 @@
 .products__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    gap: 104px;
+    /* justify-content: center; */
 }
 
 .filter {

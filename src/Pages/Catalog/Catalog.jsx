@@ -73,31 +73,31 @@ export const Catalog = () => {
 
           <div className={styles.products_cont}>
 
-          <div className={styles.filter}>
-            <input
-              type="text"
-              placeholder="Поиск товаров по названию"
-              onChange={(event) => setSearch(event.target.value)}
-            />
-            <select onChange={(event) => setSort(event.target.value)}>
-              <option value={""}>Сортировка по цене</option>
-              <option value={"asc"}>По возрастанию</option>
-              <option value={"desc"}>По убыванию</option>
-            </select>
-          </div>
-          <div className={styles.products__list}>
-            {filteredProducts.map((product) => {
-              return <ProductCard key={product.id} product={product} />;
-            })}
-          </div>
+            <div className={styles.filter}>
+              <input
+                type="text"
+                placeholder="Поиск товаров по названию"
+                onChange={(event) => setSearch(event.target.value)}
+              />
+              <select onChange={(event) => setSort(event.target.value)}>
+                <option value={""}>Сортировка по цене</option>
+                <option value={"asc"}>По возрастанию</option>
+                <option value={"desc"}>По убыванию</option>
+              </select>
+            </div>
+            <div className={styles.products__list}>
+              {filteredProducts.map((product) => {
+                return <ProductCard key={product.id} product={product} />;
+              })}
+            </div>
 
           </div>
 
         </div>
-
+        <div className="empty-products"></div>
       </div>
 
-      <div className="empty-products" ></div>
+
     </>
   );
 };
